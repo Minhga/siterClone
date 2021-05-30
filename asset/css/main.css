@@ -8,7 +8,6 @@ html {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     position: relative;
-    overflow-x: hidden;
 }
 .header {
     position: fixed;
@@ -500,10 +499,8 @@ html {
     background: #2ca841;
     transition: linear .3s;
     border-radius: 5px;
+    animation: fadeIn linear .3s;
 }
 .go-to-top:hover {
     filter: brightness(.8);
-}
-#video {
-    margin-top: 100px;
 }
