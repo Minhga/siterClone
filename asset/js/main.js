@@ -26,10 +26,17 @@ $('.thembtn').onclick = function(e) {
     console.log('e')
 }
 renderTheme()
-document.onscroll = function() {
-    if(window.scrollY > 2000) {
-        $('.go-to-top').style.display = 'inline-block'
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        $('.go-to-top').style.display = "block";
     } else {
-        $('.go-to-top').style.display = 'none'
+        $('.go-to-top').style.display = "none";
     }
+}
+// When the user clicks on the button, scroll to the top of the document
+function gototop(e) {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

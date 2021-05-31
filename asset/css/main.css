@@ -8,7 +8,9 @@ html {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     position: relative;
-    overflow-x: hidden;
+}
+body {
+    width: 100%;
 }
 .header {
     position: fixed;
@@ -94,7 +96,6 @@ html {
     justify-content: center;
     width: 200px;
     margin: 0 8px;
-    border-radius: 10px;
 }
 #introduction .btn .iconify {
     margin-left: 4px;
@@ -228,25 +229,25 @@ html {
 .feature-item::after {
     content: '';
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     transition: ease-in-out .3s;
     border-radius: 10px;
     background-color: var(--after-color);    
 }
 #features .col:nth-child(even) .feature-item::after, #goal .col:nth-child(even) .feature-item::after {
-    clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+    bottom: 0;    
+    top: 100%;
 }
 #features .col:nth-child(even)  .feature-item:hover:after, #goal .col:nth-child(even)  .feature-item:hover:after {
-    clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
+    top:0;
 }
 #features .col:nth-child(odd) .feature-item::after, #goal .col:nth-child(odd) .feature-item::after {
-    clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100%);
+    bottom: 100%;
+    top:0;
 }
 #features .col:nth-child(odd)  .feature-item:hover:after, #goal .col:nth-child(odd)  .feature-item:hover:after {
-    clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
+    bottom:0;
 }
 #work > div > div {
     position: relative;
@@ -499,7 +500,11 @@ html {
     line-height: 42px;
     background: #2ca841;
     transition: linear .3s;
+    cursor: pointer;
     border-radius: 5px;
+}
+.back {
+    cursor: pointer;
 }
 .go-to-top:hover {
     filter: brightness(.8);
