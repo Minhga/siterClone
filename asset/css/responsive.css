@@ -1,5 +1,7 @@
 @media (max-width: 739px) {
-
+    .go-to-top {
+        left: 20px
+    }
     .miss-text {
         font-size: 12px;
     }
