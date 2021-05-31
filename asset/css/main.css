@@ -487,6 +487,7 @@ body {
     transition: linear .2s;
 }
 .go-to-top {
+    z-index: 6;
     position: fixed;
     bottom: 50px;
     right: 50px;
